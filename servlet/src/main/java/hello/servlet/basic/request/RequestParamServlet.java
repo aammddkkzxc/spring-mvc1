@@ -23,16 +23,16 @@ public class RequestParamServlet extends HttpServlet {
         System.out.println("전체 파라미터 조회 - end");
 
         System.out.println("단일 파라미터 조회");
-        String userName = req.getParameter("userName");
-        System.out.println("request.getParameter(userName) = " + userName);
+        String username = req.getParameter("username");
+        System.out.println("request.getParameter(username) = " + username);
         String age = req.getParameter("age");
         System.out.println("request.getParameter(age) = " + age);
 
         System.out.println("이름이 같은 복수 파라미터 조회");
-        System.out.println("request.getParameterValues(userName)");
-        String[] userNames = req.getParameterValues("userName");
+        System.out.println("request.getParameterValues(username)");
+        String[] userNames = req.getParameterValues("username");
         for (String name : userNames) {
-            System.out.println("userName=" + name); }
+            System.out.println("username=" + name); }
 
         resp.getWriter().write("ok");
     }
